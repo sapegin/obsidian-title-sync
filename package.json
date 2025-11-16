@@ -1,6 +1,7 @@
 {
   "name": "obsidian-better-title-sync",
   "version": "1.0.0",
+  "private": true,
   "description": "Obsidian plugin that synchronies title in Markdown when file is renamed",
   "main": "main.js",
   "scripts": {
