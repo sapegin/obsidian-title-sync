@@ -1,6 +1,6 @@
 # Title Sync Obsidian plugin
 
-[Obsidian](https://obsidian.md) plugin that synchronies title in Markdown when file is renamed.
+[Obsidian](https://obsidian.md) plugin that updates first-level heading in Markdown when file is renamed
 
 [![Washing your code. A book on clean code for frontend developers](https://sapegin.me/images/washing-code-github.jpg)](https://sapegin.me/book/)
 
