@@ -1,0 +1,47 @@
+{
+  "name": "obsidian-better-title-sync",
+  "version": "1.0.0",
+  "description": "Obsidian plugin that synchronies title in Markdown when file is renamed",
+  "main": "main.js",
+  "scripts": {
+    "dev": "node esbuild.config.mjs",
+    "pretest": "npm run lint",
+    "test": "true",
+    "posttest": "npm run format",
+    "lint": "eslint . --cache --fix",
+    "build": "tsc -noEmit -skipLibCheck && node esbuild.config.mjs production",
+    "format": "prettier --write \"**/*.{js,mjc,cjs,ts,tsx,json,jsonc,md}\"",
+    "version": "node version-bump.mjs",
+    "prepare": "husky"
+  },
+  "keywords": [],
+  "author": {
+    "name": "Artem Sapegin",
+    "url": "https://sapegin.me/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sapegin/obsidian-better-title-sync.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sapegin/obsidian-better-title-sync/issues"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "24.10.1",
+    "builtin-modules": "5.0.0",
+    "esbuild": "0.27.0",
+    "eslint-config-tamia": "9.8.0",
+    "eslint": "9.39.1",
+    "husky": "9.1.7",
+    "lint-staged": "16.2.6",
+    "obsidian": "latest",
+    "prettier": "3.6.2",
+    "tslib": "2.8.1",
+    "typescript": "5.9.3"
+  },
+  "lint-staged": {
+    "*.{js,mjc,cjs,ts,tsx}": "eslint --cache --fix",
+    "*.{js,mjc,cjs,ts,tsx,json,jsonc,md}": "prettier --write"
+  }
+}
