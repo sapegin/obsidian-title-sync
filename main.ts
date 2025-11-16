@@ -21,7 +21,16 @@ export default class TitleSyncPlugin extends Plugin {
       // No heading in Markdown file, add a new one
       void this.app.vault.process(file, (contents) => {
         const newHeading = `# ${file.basename}`;
-        return `${newHeading}\n\n${contents}`;
+        if (metadata?.frontmatterPosition) {
+          // If file has frontmatter, add new heading after it
+          const frontmatterEndOffset = metadata.frontmatterPosition.end.offset;
+          const beforeFrontmatter = contents.slice(0, frontmatterEndOffset);
+          const afterFrontmatter = contents.slice(frontmatterEndOffset);
+          return `${beforeFrontmatter.trimEnd()}\n${newHeading}\n${afterFrontmatter.trimStart()}`;
+        } else {
+          // Otherwise, add new heading right at the beginning
+          return `${newHeading}\n${contents.trimStart()}`;
+        }
       });
     } else if (h1.heading.trim() === oldFilename) {
       // The old filename matches the existing Markdown heading: update the
@@ -33,10 +42,10 @@ export default class TitleSyncPlugin extends Plugin {
           .slice(h1.position.start.offset + 1, h1.position.end.offset)
           .trim();
         if (oldHeading === oldFilename) {
-          const start = contents.slice(0, h1.position.start.offset);
-          const end = contents.slice(h1.position.end.offset);
+          const beforeHeading = contents.slice(0, h1.position.start.offset);
+          const afterHeading = contents.slice(h1.position.end.offset);
           const newHeading = `# ${file.basename}`;
-          return start + newHeading + end;
+          return `${beforeHeading}${newHeading}${afterHeading}`;
         } else {
           return contents;
         }
