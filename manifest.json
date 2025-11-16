@@ -1,6 +1,6 @@
 {
-  "id": "better-title-sync",
-  "name": "Better Title Sync",
+  "id": "title-sync",
+  "name": "Title Sync",
   "version": "1.0.0",
   "minAppVersion": "0.15.0",
   "description": "Synchronies title in Markdown when file is renamed",

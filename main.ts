@@ -4,7 +4,7 @@ function getBasename(filepath: string) {
   return filepath.split(/[/\\]/).pop()?.replace(/\.md$/, '') ?? '';
 }
 
-export default class BetterTitleSyncPlugin extends Plugin {
+export default class TitleSyncPlugin extends Plugin {
   private handleRename = (file: TAbstractFile, oldPath: string) => {
     // Skip folders
     if (file instanceof TFile === false) {

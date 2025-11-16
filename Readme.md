@@ -1,4 +1,4 @@
-# Better Title Sync Obsidian plugin
+# Title Sync Obsidian plugin
 
 [Obsidian](https://obsidian.md) plugin that synchronies title in Markdown when file is renamed.
 
@@ -34,6 +34,6 @@ Bug fixes are welcome, but not new features. Please take a moment to review the 
 
 ## Authors and license
 
-[Artem Sapegin](https://sapegin.me) and [contributors](https://github.com/sapegin/obsidian-better-title-sync/graphs/contributors).
+[Artem Sapegin](https://sapegin.me) and [contributors](https://github.com/sapegin/obsidian-title-sync/graphs/contributors).
 
 MIT License, see the included [License.md](License.md) file.

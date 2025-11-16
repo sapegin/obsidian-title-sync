@@ -1,5 +1,5 @@
 {
-  "name": "obsidian-better-title-sync",
+  "name": "obsidian-title-sync",
   "version": "1.0.0",
   "private": true,
   "description": "Obsidian plugin that synchronies title in Markdown when file is renamed",
@@ -22,10 +22,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sapegin/obsidian-better-title-sync.git"
+    "url": "git+https://github.com/sapegin/obsidian-title-sync.git"
   },
   "bugs": {
-    "url": "https://github.com/sapegin/obsidian-better-title-sync/issues"
+    "url": "https://github.com/sapegin/obsidian-title-sync/issues"
   },
   "license": "MIT",
   "devDependencies": {
