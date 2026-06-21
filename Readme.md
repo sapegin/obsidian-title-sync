@@ -1,5 +1,7 @@
 # Title Sync Obsidian plugin
 
+[Repository moved](https://github.com/sapegin/raccoon-obsidian/tree/main/plugins/better-title-sync)
+
 [Obsidian](https://obsidian.md) plugin that updates first-level heading in Markdown when file is renamed
 
 [![Washing your code. A book on clean code for frontend developers](https://sapegin.me/images/washing-code-github.jpg)](https://sapegin.me/book/)
